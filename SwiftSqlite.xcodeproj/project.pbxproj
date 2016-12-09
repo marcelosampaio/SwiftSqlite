@@ -12,6 +12,7 @@
 		9CC2DCFB1DFB625100EB0B0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CC2DCF91DFB625100EB0B0E /* Main.storyboard */; };
 		9CC2DCFD1DFB625100EB0B0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CC2DCFC1DFB625100EB0B0E /* Assets.xcassets */; };
 		9CC2DD001DFB625100EB0B0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CC2DCFE1DFB625100EB0B0E /* LaunchScreen.storyboard */; };
+		9CC2DD091DFB646800EB0B0E /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CC2DD081DFB646800EB0B0E /* libsqlite3.0.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		9CC2DCFC1DFB625100EB0B0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CC2DCFF1DFB625100EB0B0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CC2DD011DFB625100EB0B0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CC2DD081DFB646800EB0B0E /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CC2DD091DFB646800EB0B0E /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 			children = (
 				9CC2DCF41DFB625000EB0B0E /* SwiftSqlite */,
 				9CC2DCF31DFB625000EB0B0E /* Products */,
+				9CC2DD071DFB646800EB0B0E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +66,14 @@
 				9CC2DD011DFB625100EB0B0E /* Info.plist */,
 			);
 			path = SwiftSqlite;
+			sourceTree = "<group>";
+		};
+		9CC2DD071DFB646800EB0B0E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9CC2DD081DFB646800EB0B0E /* libsqlite3.0.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
