@@ -13,6 +13,7 @@
 		9CC2DCFD1DFB625100EB0B0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CC2DCFC1DFB625100EB0B0E /* Assets.xcassets */; };
 		9CC2DD001DFB625100EB0B0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CC2DCFE1DFB625100EB0B0E /* LaunchScreen.storyboard */; };
 		9CC2DD091DFB646800EB0B0E /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CC2DD081DFB646800EB0B0E /* libsqlite3.0.tbd */; };
+		9CC2DD0B1DFB8BC700EB0B0E /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC2DD0A1DFB8BC700EB0B0E /* Database.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,8 @@
 		9CC2DCFF1DFB625100EB0B0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CC2DD011DFB625100EB0B0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CC2DD081DFB646800EB0B0E /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		9CC2DD0A1DFB8BC700EB0B0E /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		9CC2DD0C1DFB912700EB0B0E /* SwiftSqlite-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftSqlite-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,8 @@
 				9CC2DCFC1DFB625100EB0B0E /* Assets.xcassets */,
 				9CC2DCFE1DFB625100EB0B0E /* LaunchScreen.storyboard */,
 				9CC2DD011DFB625100EB0B0E /* Info.plist */,
+				9CC2DD0A1DFB8BC700EB0B0E /* Database.swift */,
+				9CC2DD0C1DFB912700EB0B0E /* SwiftSqlite-Bridging-Header.h */,
 			);
 			path = SwiftSqlite;
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CC2DD0B1DFB8BC700EB0B0E /* Database.swift in Sources */,
 				9CC2DCF81DFB625000EB0B0E /* ViewController.swift in Sources */,
 				9CC2DCF61DFB625000EB0B0E /* AppDelegate.swift in Sources */,
 			);
@@ -278,6 +284,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MAS.SwiftSqlite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftSqlite/SwiftSqlite-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -291,6 +298,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MAS.SwiftSqlite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftSqlite/SwiftSqlite-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
