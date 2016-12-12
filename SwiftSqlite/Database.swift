@@ -13,13 +13,13 @@ class Database : NSObject {
     
     func querySql(_ sql: String) -> Array<Any> {
         
-        print("**** QUERY SQL: \(sql)  will return array of nil")
-        
+        // query execution
         let data = db.query(sql: sql)
+        
+        // set up result array
         var resultArray = [LocationRow]()
         
-        
-        
+        // data retrieval
         for i in 0..<data.count {
             let row = data[i]
             
@@ -29,14 +29,8 @@ class Database : NSObject {
             let latitude = row["latitude"] as! String
             let longitude = row["longitude"] as! String
             let altitude = row["altitude"] as! String
-//            
-//            
-//            print("*** cityId: \(cityId)")
-//            print("*** country: \(country)")
-//            print("*** city: \(city)")
-//            print("----------------------------------")
-            
-            
+
+            // loading result array
             resultArray.append(LocationRow.init(cityId: cityId, country: country, city: city, latitude: latitude, longitude: longitude, altitude: altitude))
             
         }
@@ -46,7 +40,10 @@ class Database : NSObject {
     
     func executeSql(_ sql: String) -> Int {
         
-        print("**** QUERY SQL: \(sql)  will return zero Int")
+        // sql statment execution
+        var i = 0
+        i=Int(db.execute(sql: sql))
+        print("*** sql execution code: \(i)")
         
         return 0
     }
