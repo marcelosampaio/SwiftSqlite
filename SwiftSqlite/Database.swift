@@ -15,7 +15,7 @@ class Database : NSObject {
         
         print("**** QUERY SQL: \(sql)  will return array of nil")
         
-        let data = db.query(sql: "select cityId, country, city, latitude, longitude, altitude from location order by country, city")
+        let data = db.query(sql: sql)
         var resultArray = [LocationRow]()
         
         
@@ -29,12 +29,12 @@ class Database : NSObject {
             let latitude = row["latitude"] as! String
             let longitude = row["longitude"] as! String
             let altitude = row["altitude"] as! String
-            
-            
-            print("*** cityId: \(cityId)")
-            print("*** country: \(country)")
-            print("*** city: \(city)")
-            print("----------------------------------")
+//            
+//            
+//            print("*** cityId: \(cityId)")
+//            print("*** country: \(country)")
+//            print("*** city: \(city)")
+//            print("----------------------------------")
             
             
             resultArray.append(LocationRow.init(cityId: 0, country: country, city: city, latitude: latitude, longitude: longitude, altitude: altitude))
