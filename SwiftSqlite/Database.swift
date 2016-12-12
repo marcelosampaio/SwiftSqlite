@@ -37,7 +37,7 @@ class Database : NSObject {
 //            print("----------------------------------")
             
             
-            resultArray.append(LocationRow.init(cityId: 0, country: country, city: city, latitude: latitude, longitude: longitude, altitude: altitude))
+            resultArray.append(LocationRow.init(cityId: cityId, country: country, city: city, latitude: latitude, longitude: longitude, altitude: altitude))
             
         }
 
