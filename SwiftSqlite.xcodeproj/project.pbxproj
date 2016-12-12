@@ -17,6 +17,8 @@
 		9CDC8B521DFDE03D006F8655 /* String-Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDC8B4F1DFDE03D006F8655 /* String-Extras.swift */; };
 		9CDC8B551DFDE1A3006F8655 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDC8B541DFDE1A3006F8655 /* libsqlite3.tbd */; };
 		9CDC8B571DFDE224006F8655 /* location.db in Resources */ = {isa = PBXBuildFile; fileRef = 9CDC8B561DFDE224006F8655 /* location.db */; };
+		9CDC8B5C1DFDF5E2006F8655 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDC8B5B1DFDF5E2006F8655 /* Database.swift */; };
+		9CDC8B5F1DFDFBE6006F8655 /* LocationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDC8B5E1DFDFBE6006F8655 /* LocationRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		9CDC8B4F1DFDE03D006F8655 /* String-Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String-Extras.swift"; path = "SqliteDB/String-Extras.swift"; sourceTree = "<group>"; };
 		9CDC8B541DFDE1A3006F8655 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		9CDC8B561DFDE224006F8655 /* location.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = location.db; sourceTree = "<group>"; };
+		9CDC8B5B1DFDF5E2006F8655 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		9CDC8B5E1DFDFBE6006F8655 /* LocationRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,15 +72,12 @@
 		9CC2DCF41DFB625000EB0B0E /* SwiftSqlite */ = {
 			isa = PBXGroup;
 			children = (
-				9CDC8B561DFDE224006F8655 /* location.db */,
+				9CDC8B5D1DFDFBD5006F8655 /* Classes */,
+				9CDC8B5A1DFDF5AD006F8655 /* Root */,
+				9CDC8B591DFDF59A006F8655 /* Controllers */,
+				9CDC8B581DFDF577006F8655 /* User Interface */,
 				9CDC8B4C1DFDE021006F8655 /* SqliteDB */,
-				9CC2DCF51DFB625000EB0B0E /* AppDelegate.swift */,
-				9CC2DCF71DFB625000EB0B0E /* ViewController.swift */,
-				9CC2DCF91DFB625100EB0B0E /* Main.storyboard */,
 				9CC2DCFC1DFB625100EB0B0E /* Assets.xcassets */,
-				9CC2DCFE1DFB625100EB0B0E /* LaunchScreen.storyboard */,
-				9CC2DD011DFB625100EB0B0E /* Info.plist */,
-				9CC2DD0C1DFB912700EB0B0E /* SwiftSqlite-Bridging-Header.h */,
 			);
 			path = SwiftSqlite;
 			sourceTree = "<group>";
@@ -98,6 +99,43 @@
 				9CDC8B4F1DFDE03D006F8655 /* String-Extras.swift */,
 			);
 			name = SqliteDB;
+			sourceTree = "<group>";
+		};
+		9CDC8B581DFDF577006F8655 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				9CC2DCF91DFB625100EB0B0E /* Main.storyboard */,
+				9CC2DCFE1DFB625100EB0B0E /* LaunchScreen.storyboard */,
+			);
+			name = "User Interface";
+			sourceTree = "<group>";
+		};
+		9CDC8B591DFDF59A006F8655 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9CC2DCF71DFB625000EB0B0E /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		9CDC8B5A1DFDF5AD006F8655 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				9CC2DCF51DFB625000EB0B0E /* AppDelegate.swift */,
+				9CC2DD011DFB625100EB0B0E /* Info.plist */,
+				9CC2DD0C1DFB912700EB0B0E /* SwiftSqlite-Bridging-Header.h */,
+				9CDC8B561DFDE224006F8655 /* location.db */,
+				9CDC8B5B1DFDF5E2006F8655 /* Database.swift */,
+			);
+			name = Root;
+			sourceTree = "<group>";
+		};
+		9CDC8B5D1DFDFBD5006F8655 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9CDC8B5E1DFDFBE6006F8655 /* LocationRow.swift */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,9 +212,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CDC8B5C1DFDF5E2006F8655 /* Database.swift in Sources */,
 				9CDC8B521DFDE03D006F8655 /* String-Extras.swift in Sources */,
 				9CDC8B501DFDE03D006F8655 /* SQLiteDB.swift in Sources */,
 				9CC2DCF81DFB625000EB0B0E /* ViewController.swift in Sources */,
+				9CDC8B5F1DFDFBE6006F8655 /* LocationRow.swift in Sources */,
 				9CC2DCF61DFB625000EB0B0E /* AppDelegate.swift in Sources */,
 				9CDC8B511DFDE03D006F8655 /* SQLTable.swift in Sources */,
 			);
