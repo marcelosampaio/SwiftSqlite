@@ -12,9 +12,9 @@ import Foundation
 class Database : NSObject {
     
     func getLocations() -> Array<Any> {
-        
+
         // query execution
-        let data = db.query(sql: "select cityId, country, city, latitude, longitude, altitude from location order by country, city")
+        let data = db.query(sql: getSQL(action: "getLocations"))
         
         // set up result array
         var resultArray = [LocationRow]()
@@ -73,10 +73,26 @@ class Database : NSObject {
         // sql statment execution
         var i = 0
         i=Int(db.execute(sql: sql))
-        print("*** sql execution code: \(i)")
         
         return i
         
+    }
+    
+    // MARK: Class Helper
+    private func getSQL(action: String) -> String {
+    
+        var result = String()
+
+        if let path = Bundle.main.path(forResource: "Config", ofType: "plist") {
+
+            // file root is a dictionary
+            if let dic = NSDictionary(contentsOfFile: path) as? [String: Any] {
+                print ("****** dic = \(dic)")
+                result = dic["getLocations"] as! String
+            }
+        }
+
+        return result
     }
     
 }
