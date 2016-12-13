@@ -30,12 +30,9 @@ class ViewController: UIViewController {
     // MARK: - Database
     private func prepareDatabase() {
 
-        let data = database.querySql("select cityId, country, city, latitude, longitude, altitude from location order by country, city")
-
         
-        
-//        let data = db.query(sql: "select cityId, country, city, latitude, longitude, altitude from location order by country, city")
-
+        let data = database.getLocations()
+    
         for item in data {
             let locationRow = item as! LocationRow
             
