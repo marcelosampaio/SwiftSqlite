@@ -23,7 +23,7 @@ class Database : NSObject {
         for i in 0..<data.count {
             let row = data[i]
             
-            let cityId = row["cityId"] as! Int
+            let cityIdX = row["cityId"] as! Int
             let country = row["country"] as! String
             let city = row["city"] as! String
             let latitude = row["latitude"] as! String
@@ -31,7 +31,7 @@ class Database : NSObject {
             let altitude = row["altitude"] as! String
 
             // loading result array
-            resultArray.append(LocationRow.init(cityId: cityId, country: country, city: city, latitude: latitude, longitude: longitude, altitude: altitude))
+            resultArray.append(LocationRow.init(cityId: cityIdX, country: country, city: city, latitude: latitude, longitude: longitude, altitude: altitude))
             
         }
 
@@ -45,7 +45,8 @@ class Database : NSObject {
         i=Int(db.execute(sql: sql))
         print("*** sql execution code: \(i)")
         
-        return 0
+        return i
+        
     }
     
 }
